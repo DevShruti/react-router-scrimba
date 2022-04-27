@@ -2,7 +2,7 @@ import React from "react"
 
 import Home from "./Home"
 import Products from "./Products"
-import {Link, Routes, Route, BrowserRouter} from "react-router-dom"
+import {Link, Routes, Route} from "react-router-dom"
 
 function App() {    
     return (
@@ -14,11 +14,9 @@ function App() {
           
             <Routes>
                 <Route exact path="/"  element={<Home />}>
-                    <Home />
-                </Route>
+                    </Route>
                 <Route path="/products" element={<Products />}>
-                    <Products />
-                </Route>
+                  </Route>
             </Routes>
           
             {/*
