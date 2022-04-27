@@ -2,7 +2,7 @@ import React from "react"
 
 import Home from "./Home"
 import Products from "./Products"
-import {Link} from "react-router-dom"
+import {Link, Switch, Route} from "react-router-dom"
 
 function App() {    
     return (
@@ -11,6 +11,14 @@ function App() {
                 <Link to="/">Home</Link>
                 <Link to="/products">Products</Link>
             </nav>
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route path="/products">
+                    <Products />
+                </Route>
+            </Switch>
             {/*
                 Route between 2 components depending on the path:
                 1. Home page ("/")
