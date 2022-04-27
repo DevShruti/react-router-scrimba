@@ -2,13 +2,14 @@ import React from "react"
 
 import Home from "./Home"
 import Products from "./Products"
+import {Link} from "react-router-dom"
 
 function App() {    
     return (
         <div>
             <nav>
-                <a>Home</a>
-                <a>Products</a>
+                <Link to="/">Home</Link>
+                <Link to="/products">Products</Link>
             </nav>
             {/*
                 Route between 2 components depending on the path:
