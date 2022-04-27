@@ -3,6 +3,7 @@ import React from "react"
 import Home from "./Home"
 import Products from "./Products"
 import {Link, Routes, Route} from "react-router-dom"
+import ProductDetail from "./ProductDetail"
 
 function App() {    
     return (
@@ -17,6 +18,9 @@ function App() {
                     </Route>
                 <Route path="/products" element={<Products />}>
                   </Route>
+                  <Route path="/products/:productId">
+                    <ProductDetail />
+                </Route>
             </Routes>
           
             {/**
