@@ -1,11 +1,16 @@
 import React from "react"
 import {useParams} from "react-router-dom"
+import productsData from "./productsData"
 
 function ProductDetail() {
     const {productId} = useParams()
-    console.log(productId)
+    const thisProduct = productsData.find(prod => prod.id === productId)
     return (
-        <h1>Product Detail Page</h1>
+        <div>
+            <h1>{thisProduct.name}</h1>
+            <p> Price: {thisProduct.price}</p>
+            <p>{thisProduct.description}</p>
+        </div>
     )
 }
 
